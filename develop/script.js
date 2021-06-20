@@ -1,6 +1,17 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-var generatePassword = " ";
+
+function generatePassword() {
+  var lowCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m","n","o","p","q","r","s","t","v","w","x","y", "z"];
+  var numCharacter = prompt("Type in the amount of characters you would like in your password. Must select a number between 8 and 128.");
+  let returnString= " ";
+  console.log(numCharacter);
+  for (let i = 0; i < numCharacter; i++) {
+     returnString += lowCharacters[Math.floor(Math.random() * lowCharacters.length)]
+    }
+    return returnString;
+};
+
 
 // Write password to the #password input
 function writePassword() {
@@ -15,8 +26,17 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
   
 
-// on click: series of prompts pop up for pass word criteria
-  // prompt.('Password criteria is..')
+
+
+// let specialCharacter = ["$", "@", "!", "?", "^"];
+// let numCharacter = window.prompt("Type in the amount of characters you would like in your password. Must select a number between 8 and 128.");
+// console.log(numCharacter);
+//  for (let i = 0; i <numCharacter.length; i++){
+//  }
+//  return(specialCharacter[Math.floor(Math.random()*specialCharacter.length)])
+//  console.log(specialCharacter);
+
+
 
 // user selects which criteria to include
 
