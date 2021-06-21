@@ -42,7 +42,7 @@ function upperCaseCharacters (){
   var upperCaseLetters= ["A","B","C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
   var yesUpperCase = confirm("Click OK to include uppercase letters in your password.");
   if (yesUpperCase === true){
-    possibleCharacter += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)]
+    possibleCharacter += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
   } else
     (possibleCharacter);
 };
@@ -52,7 +52,7 @@ function specialCharacters (){
   var specialChar = ["$", "@", "!", "?", "^"];
   var yesSpecialCharacter = confirm("Click OK to include special characters in your password.")
   if (yesSpecialCharacter===true){
-    possibleCharacter =+ specialChar[Math.floor(Math.random()* specialChar.length)]
+    possibleCharacter += specialChar[Math.floor(Math.random()* specialChar.length)];
   } else (possibleCharacter);
 };
 
