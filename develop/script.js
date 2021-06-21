@@ -22,6 +22,7 @@ function generatePassword() {
     }
     number();
     upperCaseCharacters();
+    specialCharacters();
     return (possibleCharacter);
     console.log(possibleCharacter); 
 };
@@ -30,17 +31,16 @@ function generatePassword() {
 //function for the user if they would like a number in their password
 function number (){
   var numberChoice = [0,1,2,3,4,5,6,7,8,9];
-  var yesNumber = confirm("Click OK if you'd like to include numbers in your password.");
+  var yesNumber = confirm("Click OK to include numbers in your password.");
   if (yesNumber === true){
     possibleCharacter += numberChoice[Math.floor(Math.random()*numberChoice.length)];
   } else (possibleCharacter);
 };
 
-
 //function for the user if they would like uppercase characters in their password
 function upperCaseCharacters (){
   var upperCaseLetters= ["A","B","C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-  var yesUpperCase = confirm("Would you like to include uppercase letters in your password?");
+  var yesUpperCase = confirm("Click OK to include uppercase letters in your password.");
   if (yesUpperCase === true){
     possibleCharacter += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)]
   } else
@@ -48,9 +48,13 @@ function upperCaseCharacters (){
 };
 
 //function to include special characters 
-specialCharacters = () =>
-
-
+function specialCharacters (){
+  var specialChar = ["$", "@", "!", "?", "^"];
+  var yesSpecialCharacter = confirm("Click OK to include special characters in your password.")
+  if (yesSpecialCharacter===true){
+    possibleCharacter =+ specialChar[Math.floor(Math.random()* specialChar.length)]
+  } else (possibleCharacter);
+};
 
 
 // Write password to the #password input
