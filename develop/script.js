@@ -4,6 +4,16 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword() {
   var lowCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m","n","o","p","q","r","s","t","v","w","x","y", "z"];
   var numCharacter = prompt("Type in the amount of characters you would like in your password. Must select a number between 8 and 128.");
+  if (numCharacter< 8){
+    alert("Must select a number greater than 8.");
+    return " ";
+  } else if (numCharacter>128){
+    alert("Must select a number less than 128.");
+    return " ";
+  }else if (numCharacter !== 1){
+    alert("Must select a number");
+    return " ";
+  }
   let returnString= " ";
   console.log(numCharacter);
   for (let i = 0; i < numCharacter; i++) {
@@ -12,7 +22,9 @@ function generatePassword() {
     return returnString;
 };
 
+function lowerCase (){
 
+}
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
