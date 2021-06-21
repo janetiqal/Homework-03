@@ -1,5 +1,6 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
+var possibleCharacter = [];
 
 function generatePassword() {
   var lowCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m","n","o","p","q","r","s","t","v","w","x","y", "z"];
@@ -10,21 +11,48 @@ function generatePassword() {
   } else if (numCharacter>128){
     alert("Must select a number less than 128.");
     return " ";
-  }else if (numCharacter !== 1){
-    alert("Must select a number");
-    return " ";
   }
-  let returnString= " ";
+  // }else if (numCharacter == a){
+  //   alert("Must select a number");
+  //   return " ";
+  // } thought i needed this code if users tried selected letters or characters instead of numbers?
   console.log(numCharacter);
   for (let i = 0; i < numCharacter; i++) {
-     returnString += lowCharacters[Math.floor(Math.random() * lowCharacters.length)]
+    possibleCharacter += lowCharacters[Math.floor(Math.random() * lowCharacters.length)]
     }
-    return returnString;
+    number();
+    upperCaseCharacters();
+    return (possibleCharacter);
+    console.log(possibleCharacter); 
 };
 
-function lowerCase (){
 
-}
+//function for the user if they would like a number in their password
+function number (){
+  var numberChoice = [0,1,2,3,4,5,6,7,8,9];
+  var yesNumber = confirm("Click OK if you'd like to include numbers in your password.");
+  if (yesNumber === true){
+    possibleCharacter += numberChoice[Math.floor(Math.random()*numberChoice.length)];
+  } else (possibleCharacter);
+};
+
+
+//function for the user if they would like uppercase characters in their password
+function upperCaseCharacters (){
+  var upperCaseLetters= ["A","B","C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  var yesUpperCase = confirm("Would you like to include uppercase letters in your password?");
+  if (yesUpperCase === true){
+    possibleCharacter += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)]
+  } else
+    (possibleCharacter);
+};
+
+//function to include special characters 
+specialCharacters = () =>
+
+
+
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
@@ -32,7 +60,7 @@ function writePassword() {
 
   passwordText.value = password;
 
-}
+};
 
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);

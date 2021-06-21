@@ -9,6 +9,8 @@ The first thing I did was write pseudocode as line comments at the end of my jav
 I opened the index file with a live server and checked the console. Upon checking the console, I saw an error with the the  generatePassword being undefined. I then began to define the function that was being called in the var password on line 11. 
 
 I wrote the function for generatePassword to determine the character length of the password. The password must be a length of 8 to 128 characters. If the user types in a number less than 8 or more than 128 a prompt message shows up in the browser and alerts the user of their error. The function also warns the user to pick a number and not any other character. 
+
+I realized I needed to create a variable on the global scope in order to concatenate the new password with each prompt the user answers. I named this variable possibleCharacters. 
 ## Link to My Work
 ## Screenshots of Working Application
 ## Created By
