@@ -14,6 +14,9 @@ I wrote the function for generatePassword to determine the character length of t
 I realized I needed to create a variable on the global scope in order to concatenate the new password with each prompt the user answers. I named this variable possibleCharacters. 
 I created function numbers() in order to ask the user if they would like numbers generated in new password. I used the confirm boxes in order to make the conditions statements easier because it assigns the variable a boolean value. I did the same with the function upperCaseLetters() and function specialCharacters(). If the user clicks confirm, the password would generate with the corresponding character.
 
+The generatePassword function calls on the 4 seperate functions and then a locally scoped variable called password is set equal to the possible character string. The possible character array is randomized in the generatePassword function using the multiple Math methods. The string variable, password is returned. 
+
+I had trouble figuring out how to add the results of the 4 functions together in the generate password function. Using the .push method and the spread operator was one solution for the issue I faced. 
 
 ## Link to My Work
 https://github.com/janetiqal/Homework-03
