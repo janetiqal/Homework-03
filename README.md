@@ -18,5 +18,6 @@ I created function numbers() in order to ask the user if they would like numbers
 ## Link to My Work
 https://github.com/janetiqal/Homework-03
 ## Screenshots of Working Application
+<img width="1428" alt="Screen Shot 2021-06-22 at 5 46 57 PM-1" src="https://user-images.githubusercontent.com/84414488/123009667-c50b6680-d382-11eb-9263-09e72e46444a.png">
 ## Created By
 Janet Iqal 
