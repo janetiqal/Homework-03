@@ -68,7 +68,6 @@ var possibleCharacter = [];
 
 
 function generatePassword() {
-  var lowCharacters = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l","m","n","o","p","q","r","s","t","v","w","x","y", "z"];
   var numCharacter = prompt("Type in the amount of characters you would like in your password. Must select a number between 8 and 128.");
   if (numCharacter< 8){
     alert("Must select a number greater than 8.");
@@ -78,44 +77,93 @@ function generatePassword() {
     return " ";
   }
   console.log(numCharacter);
+  let password= "";
+    // number();
+    // upperCaseCharacters();
+    // specialCharacters();
+    // lowerCaseCharacters();
+  choices("Number");
+  choices("Lowercase");
+  choices("Uppercase");
+  choices("Special Characters");
+    console.log(possibleCharacter);
   for (let i = 0; i < numCharacter; i++) {
-    possibleCharacter += lowCharacters[Math.floor(Math.random() * lowCharacters.length)]
+    password += possibleCharacter[Math.floor(Math.random() * possibleCharacter.length)]
     }
-    number();
-    upperCaseCharacters();
-    specialCharacters();
-    return (possibleCharacter);
-    console.log(possibleCharacter); 
+    return password;
+    // number();
+    // upperCaseCharacters();
+    // specialCharacters();
+    // return (possibleCharacter);
+    // console.log(possibleCharacter); 
 };
 
+function choices (choice) {
+  const numberChoice = [0,1,2,3,4,5,6,7,8,9];
+  const upperCaseLetters= ["A","B","C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+  const lowerCaseLetters= ["A","B","C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"].map(char => char.toLowerCase());
+  var specialChar = ["$", "@", "!", "?", "^"];
+
+  const confirmChoice = confirm(`Click OK to include ${choice} in your password.`);
+
+  if (choice === "Number" && confirmChoice) {
+    possibleCharacter.push(...numberChoice) 
+  } else if (choice === "Lowercase" && confirmChoice) {
+    possibleCharacter.push(...lowerCaseLetters) 
+  } else if (choice === "Uppercase" && confirmChoice) {
+    possibleCharacter.push(...upperCaseLetters) 
+  } else if (choice === "Special Characters" && confirmChoice) {
+    possibleCharacter.push(...specialChar) 
+  }
+   
+};
 
 // function for the user if they would like a number in their password
-function number (){
-  var numberChoice = [0,1,2,3,4,5,6,7,8,9];
-  var yesNumber = confirm("Click OK to include numbers in your password.");
-  if (yesNumber === true){
-    possibleCharacter += numberChoice[Math.floor(Math.random()*numberChoice.length)];
-  } else (possibleCharacter);
-};
+// function number (){
+//   var numberChoice = [0,1,2,3,4,5,6,7,8,9];
+//   var yesNumber = confirm("Click OK to include numbers in your password.");
+//   if (yesNumber === true){
+//     // []
+//     // [[1,2,3,4,5,], [a, ,v,s,g,s,s]]
+//     // [1,2,3,5,6,7,]
+//     possibleCharacter.push(...numberChoice) 
+//     // += numberChoice[Math.floor(Math.random()*numberChoice.length)];
+//   } 
+//   // else (possibleCharacter);
+// };
 
 //function for the user if they would like uppercase characters in their password
-function upperCaseCharacters (){
-  var upperCaseLetters= ["A","B","C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
-  var yesUpperCase = confirm("Click OK to include uppercase letters in your password.");
-  if (yesUpperCase === true){
-    possibleCharacter += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
-  } else
-    (possibleCharacter);
-};
+// function upperCaseCharacters (){
+//   var upperCaseLetters= ["A","B","C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"];
+//   var yesUpperCase = confirm("Click OK to include uppercase letters in your password.");
+//   if (yesUpperCase === true){
+//     possibleCharacter.push(...upperCaseLetters)
+//     // += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
+//   } 
+//   // else(possibleCharacter);
+// };
+
+// function lowerCaseCharacters (){
+//   var lowerCaseLetters= ["A","B","C", "D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"].map(c=>c.toLowerCase());
+//   var yesLowerCase = confirm("Click OK to include lowercase letters in your password.");
+//   if (yesLowerCase === true){
+//     possibleCharacter.push(...lowerCaseLetters)
+//     // += upperCaseLetters[Math.floor(Math.random() * upperCaseLetters.length)];
+//   } 
+//   // else(possibleCharacter);
+// };
 
 //function to include special characters 
-function specialCharacters (){
-  var specialChar = ["$", "@", "!", "?", "^"];
-  var yesSpecialCharacter = confirm("Click OK to include special characters in your password.")
-  if (yesSpecialCharacter===true){
-    possibleCharacter += specialChar[Math.floor(Math.random()* specialChar.length)];
-  } else (possibleCharacter);
-};
+// function specialCharacters (){
+//   var specialChar = ["$", "@", "!", "?", "^"];
+//   var yesSpecialCharacter = confirm("Click OK to include special characters in your password.")
+//   if (yesSpecialCharacter===true){
+//     possibleCharacter.push(...specialChar)
+//     //  += specialChar[Math.floor(Math.random()* specialChar.length)];
+//   } 
+//   // else (possibleCharacter);
+// };
+
 
 
 // Write password to the #password input
