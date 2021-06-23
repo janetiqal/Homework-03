@@ -4,7 +4,7 @@ var possibleCharacter = [];
 
 function generatePassword() {
   var numCharacter = prompt("Type in the amount of characters you would like in your password. Must select a number between 8 and 128.");
-  if (numCharacter< 8|| numCharacter > 128){
+  if (numCharacter< 8|| numCharacter > 128|| isNaN(numCharacter)){
     alert("Must select a number greater than 8 and less than 128.");
     return "";
   } 
