@@ -1,11 +1,10 @@
-## Name of Assignment
-Homework-03 
-# Homework-03
-Password Generator Assignment
+# Password Generator
+
 ## Purpose
-The Purpose of this assignment has been to use everything we have learned in our Javascript module to create a password generator with multiple prompts. 
+The Purpose of this application has been to create a password generator with multiple prompts that asks the user what characters they would like to include in their password. 
+
 ## My Experience
-The first thing I did was write pseudocode as line comments at the end of my javascript page in order to break down the assignment into smaller pieces. I found I need to write multiple functions in order to achieve the simplest results. 
+The first thing I did was write pseudocode as line comments at the end of my javascript page in order to break down the application into smaller pieces. I found I need to write multiple functions in order to achieve the simplest results. 
 
 I opened the index file with a live server and checked the console. Upon checking the console, I saw an error with the the  generatePassword being undefined. I then began to define the function that was being called in the var password on line 11. 
 
@@ -18,9 +17,10 @@ The generatePassword function calls on the 4 seperate functions and then a local
 
 I had trouble figuring out how to add the results of the 4 functions together in the generate password function. Using the .push method and the spread operator was one solution for the issue I faced. 
 
-## Link to My Work
-https://github.com/janetiqal/Homework-03
+## Link to App
+Link is deployed on github pages,[here](https://janetiqal.github.io/Password-Generator/).
+
 ## Screenshots of Working Application
 <img width="1428" alt="Screen Shot 2021-06-22 at 5 46 57 PM-1" src="https://user-images.githubusercontent.com/84414488/123009667-c50b6680-d382-11eb-9263-09e72e46444a.png">
-## Created By
-Janet Iqal 
+
+## Created By Janet Iqal 
