@@ -3,6 +3,14 @@
 ## Purpose
 The Purpose of this application has been to create a password generator with multiple prompts that asks the user what characters they would like to include in their password. 
 
+## User Story
+
+```
+AS AN employee with access to sensitive data
+I WANT to randomly generate a password that meets certain criteria
+SO THAT I can create a strong password that provides greater security
+```
+
 ## My Experience
 The first thing I did was write pseudocode as line comments at the end of my javascript page in order to break down the application into smaller pieces. I found I need to write multiple functions in order to achieve the simplest results. 
 
@@ -18,7 +26,7 @@ The generatePassword function calls on the 4 seperate functions and then a local
 I had trouble figuring out how to add the results of the 4 functions together in the generate password function. Using the .push method and the spread operator was one solution for the issue I faced. 
 
 ## Link to App
-Link is deployed on github pages,[here](https://janetiqal.github.io/Password-Generator/).
+Link is deployed on github pages, [here](https://janetiqal.github.io/Password-Generator/).
 
 ## Screenshots of Working Application
 <img width="1428" alt="Screen Shot 2021-06-22 at 5 46 57 PM-1" src="https://user-images.githubusercontent.com/84414488/123009667-c50b6680-d382-11eb-9263-09e72e46444a.png">
